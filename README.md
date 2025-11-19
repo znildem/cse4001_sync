@@ -39,3 +39,50 @@ From the project directory:
 
 ```bash
 make
+## Screenshots
+
+### Problem 1 – No-starve Readers–Writers
+
+Start:
+
+![Problem 1 start](1%20start.png)
+
+Complete:
+
+![Problem 1 complete](1%20complete.png)
+
+---
+
+### Problem 2 – Writer-Priority Readers–Writers
+
+Start:
+
+![Problem 2 start](2%20start.png)
+
+Complete:
+
+![Problem 2 complete](2%20complete.png)
+
+---
+
+### Problem 3 – Dining Philosophers #1 (Footman)
+
+Start:
+
+![Problem 3 start](3%20start.png)
+
+Complete:
+
+![Problem 3 complete](3%20complete.png)
+
+---
+
+### Problem 4 – Dining Philosophers #2 (Lefty/Righty)
+
+Start:
+
+![Problem 4 start](4%20start.png)
+
+Complete:
+
+![Problem 4 complete](4%20complete.png)
