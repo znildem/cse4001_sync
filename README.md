@@ -1,88 +1,78 @@
-# CSE4001 – Thread Synchronization (`cse4001_sync`)
+# CSE4001 – Thread Synchronization (cse4001_sync)
 
-This program implements four classic synchronization problems using POSIX threads and semaphores, based on solutions from **The Little Book of Semaphores** by Allen B. Downey.
+This program implements four classic synchronization problems using POSIX threads and semaphores, based on solutions from The Little Book of Semaphores by Allen B. Downey.
 
-## Problems
+------------------------------------------------------------
 
-1. **No-starve readers–writers (Problem 1)**  
-   - 5 reader threads, 5 writer threads  
-   - Uses a readers’ lightswitch, a `roomEmpty` semaphore, and a `turnstile` semaphore  
-   - Guarantees that neither readers nor writers starve  
+## Problem 1 – No-Starve Readers–Writers
 
-2. **Writer-priority readers–writers (Problem 2)**  
-   - 5 readers, 5 writers  
-   - Uses `readTry`, `roomEmpty`, and counters for readers/writers  
-   - When a writer is waiting, new readers are blocked until writers finish  
+5 readers, 5 writers.  
+Uses: lightswitch, roomEmpty, turnstile.  
+Guarantees no starvation.
 
-3. **Dining philosophers #1 – footman / multiplex (Problem 3)**  
-   - 5 philosophers  
-   - A `footman` semaphore initialized to 4 limits the number of philosophers at the table  
-   - Prevents deadlock by ensuring not all philosophers can grab one fork at the same time  
+### Problem 1 – Start Screenshot
+"C:\Users\nevai\OneDrive\Masaüstü\Florida Tech\Junior Year\CSE4001\Assignment 5\1 start.png"
 
-4. **Dining philosophers #2 – lefty/righty (Problem 4)**  
-   - 5 philosophers  
-   - Breaks circular wait by having philosophers pick up forks in different orders (even vs odd IDs)  
-   - No footman needed; still avoids deadlock  
+### Problem 1 – Complete Screenshot
+"C:\Users\nevai\OneDrive\Masaüstü\Florida Tech\Junior Year\CSE4001\Assignment 5\1 complete.png"
 
-Each thread prints messages such as:
+------------------------------------------------------------
 
-- `"[P1] Reader 0: reading"`  
-- `"[P2] Writer 3: writing"`  
-- `"[P3] Philosopher 2: eating"`  
-- `"[P4] Philosopher 4: thinking"`
+## Problem 2 – Writer-Priority Readers–Writers
 
-so the behavior of the synchronization can be observed.
+5 readers, 5 writers.  
+Uses: readTry, roomEmpty, rmutex, wmutex.  
+Writers have priority and readers pause when a writer is waiting.
 
-## Build instructions
+### Problem 2 – Start Screenshot
+"C:\Users\nevai\OneDrive\Masaüstü\Florida Tech\Junior Year\CSE4001\Assignment 5\2 start.png"
 
-From the project directory:
+### Problem 2 – Complete Screenshot
+"C:\Users\nevai\OneDrive\Masaüstü\Florida Tech\Junior Year\CSE4001\Assignment 5\2 complete.png"
 
-```bash
+------------------------------------------------------------
+
+## Problem 3 – Dining Philosophers #1 (Footman / Multiplex)
+
+5 philosophers.  
+Footman semaphore = 4 prevents deadlock.
+
+### Problem 3 – Start Screenshot
+"C:\Users\nevai\OneDrive\Masaüstü\Florida Tech\Junior Year\CSE4001\Assignment 5\3 start.png"
+
+### Problem 3 – Complete Screenshot
+"C:\Users\nevai\OneDrive\Masaüstü\Florida Tech\Junior Year\CSE4001\Assignment 5\3 complete.png"
+
+------------------------------------------------------------
+
+## Problem 4 – Dining Philosophers #2 (Lefty/Righty)
+
+5 philosophers.  
+Even philosophers pick up forks in one order, odd in the opposite.  
+Breaks circular wait → no deadlock.
+
+### Problem 4 – Start Screenshot
+"C:\Users\nevai\OneDrive\Masaüstü\Florida Tech\Junior Year\CSE4001\Assignment 5\4 start.png"
+
+### Problem 4 – Complete Screenshot
+"C:\Users\nevai\OneDrive\Masaüstü\Florida Tech\Junior Year\CSE4001\Assignment 5\4 complete.png"
+
+------------------------------------------------------------
+
+## Build Instructions
+
+Inside the project directory:
+
 make
-## Screenshots
 
-### Problem 1 – No-starve Readers–Writers
+------------------------------------------------------------
 
-Start:
+## Run Instructions
 
-![Problem 1 start](1%20start.png)
+./cse4001_sync 1  
+./cse4001_sync 2  
+./cse4001_sync 3  
+./cse4001_sync 4
 
-Complete:
+------------------------------------------------------------
 
-![Problem 1 complete](1%20complete.png)
-
----
-
-### Problem 2 – Writer-Priority Readers–Writers
-
-Start:
-
-![Problem 2 start](2%20start.png)
-
-Complete:
-
-![Problem 2 complete](2%20complete.png)
-
----
-
-### Problem 3 – Dining Philosophers #1 (Footman)
-
-Start:
-
-![Problem 3 start](3%20start.png)
-
-Complete:
-
-![Problem 3 complete](3%20complete.png)
-
----
-
-### Problem 4 – Dining Philosophers #2 (Lefty/Righty)
-
-Start:
-
-![Problem 4 start](4%20start.png)
-
-Complete:
-
-![Problem 4 complete](4%20complete.png)
