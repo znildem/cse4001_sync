@@ -11,10 +11,10 @@ Uses: lightswitch, roomEmpty, turnstile.
 Guarantees no starvation.
 
 Problem 1 – Start Screenshot:
-C:\Users\nevai\OneDrive\Masaüstü\Florida Tech\Junior Year\CSE4001\Assignment 5\1 start.png
+![Problem 1 start](1%20start.png)
 
 Problem 1 – Complete Screenshot:
-C:\Users\nevai\OneDrive\Masaüstü\Florida Tech\Junior Year\CSE4001\Assignment 5\1 complete.png
+![Problem 1 complete](1%20complete.png)
 
 ------------------------------------------------------------
 
@@ -25,10 +25,10 @@ Uses: readTry, roomEmpty, rmutex, wmutex.
 Writers have priority, readers pause when writer is waiting.
 
 Problem 2 – Start Screenshot:
-C:\Users\nevai\OneDrive\Masaüstü\Florida Tech\Junior Year\CSE4001\Assignment 5\2 start.png
+![Problem 2 start](2%20start.png)
 
 Problem 2 – Complete Screenshot:
-C:\Users\nevai\OneDrive\Masaüstü\Florida Tech\Junior Year\CSE4001\Assignment 5\2 complete.png
+![Problem 2 complete](2%20complete.png)
 
 ------------------------------------------------------------
 
@@ -38,10 +38,10 @@ C:\Users\nevai\OneDrive\Masaüstü\Florida Tech\Junior Year\CSE4001\Assignment 5
 Footman semaphore = 4 prevents deadlock.
 
 Problem 3 – Start Screenshot:
-C:\Users\nevai\OneDrive\Masaüstü\Florida Tech\Junior Year\CSE4001\Assignment 5\3 start.png
+![Problem 3 start](3%20start.png)
 
 Problem 3 – Complete Screenshot:
-C:\Users\nevai\OneDrive\Masaüstü\Florida Tech\Junior Year\CSE4001\Assignment 5\3 complete.png
+![Problem 3 complete](3%20complete.png)
 
 ------------------------------------------------------------
 
@@ -52,10 +52,10 @@ Even philosophers pick forks in one order; odd philosophers pick the opposite or
 Breaks circular wait → no deadlock.
 
 Problem 4 – Start Screenshot:
-C:\Users\nevai\OneDrive\Masaüstü\Florida Tech\Junior Year\CSE4001\Assignment 5\4 start.png
+![Problem 4 start](4%20start.png)
 
 Problem 4 – Complete Screenshot:
-C:\Users\nevai\OneDrive\Masaüstü\Florida Tech\Junior Year\CSE4001\Assignment 5\4 complete.png
+![Problem 4 complete](4%20complete.png)
 
 ------------------------------------------------------------
 
